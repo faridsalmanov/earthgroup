@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "getInTouch": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "Earth Group MMC",
+    "title": "Venue Management.",
+    "titleAccent": "Professional",
+    "titleEnd": "Standard.",
+    "subtitle": "We organize and manage halls, exhibitions, trade fairs, congresses, and conferences across Azerbaijan with precision and professionalism.",
+    "cta1": "Our Services",
+    "cta2": "Contact Us"
+  },
+  "stats": {
+    "events": "Events Organized",
+    "venues": "Partner Venues",
+    "years": "Years Experience",
+    "satisfaction": "Client Satisfaction"
+  },
+  "services": {
+    "eyebrow": "What We Offer",
+    "title": "Event Services",
+    "subtitle": "From a single corporate meeting to a multi-day international trade fair, we deliver flawless execution every time.",
+    "viewAll": "View all services",
+    "items": {
+      "venue": {
+        "title": "Venue Management",
+        "desc": "Full management of halls and event spaces, including scheduling, setup, and day-of coordination for seamless events."
+      },
+      "fairs": {
+        "title": "Trade Fairs & Exhibitions",
+        "desc": "End-to-end organization and promotion of trade fairs and exhibition events for B2B and B2C audiences."
+      },
+      "congress": {
+        "title": "Congresses & Conferences",
+        "desc": "Professional hosting and logistics for large-scale congresses and industry conferences."
+      },
+      "meetings": {
+        "title": "Meeting Management",
+        "desc": "Tailored professional management solutions for corporate meetings and executive gatherings."
+      },
+      "staffing": {
+        "title": "Event Staffing",
+        "desc": "Experienced professional staff for every role your event requires, included in our package or as a standalone service."
+      },
+      "logistics": {
+        "title": "Logistics & Technical Support",
+        "desc": "Complete logistics coordination and on-site technical support from setup through teardown."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Who We Are",
+    "title": "A Trusted Name in Events",
+    "p1": "Earth Group MMC specializes in the management and organization of halls, trade fairs, congresses, conferences, and meeting venues. The company provides services in the professional organization, promotion, and management of events.",
+    "p2": "In a short time, Earth Group MMC has become a recognized and trusted partner in the event sector. This success has been achieved through the dedication of a professional team, innovative approaches, and a client satisfaction-driven strategy.",
+    "learnMore": "Learn more",
+    "pillar1": {
+      "title": "Professional Team",
+      "desc": "Every event is handled by a dedicated team of experienced specialists."
+    },
+    "pillar2": {
+      "title": "Client-Centred Approach",
+      "desc": "We treat every client's requirements as our top priority, from first call to final wrap-up."
+    },
+    "pillar3": {
+      "title": "Proven Track Record",
+      "desc": "Successfully co-organized Baku Marathon and international festivals across Azerbaijan."
+    }
+  },
+  "projects": {
+    "eyebrow": "Our Work",
+    "title": "Featured Projects",
+    "viewAll": "View all projects",
+    "readMore": "Read more →",
+    "page": {
+      "eyebrow": "Our Work",
+      "title": "Our Projects",
+      "subtitle": "A selection of events successfully organized and managed across Azerbaijan.",
+      "back": "Back to Home"
+    },
+    "items": {
+      "marathon25": {
+        "category": "Co-Organizer",
+        "title": "Baku Marathon 2025",
+        "desc": "Earth Group MMC served as co-organizer of the Baku Marathon 2025. The company played a key role in coordinating organizational activities, participant registration, volunteer management, and logistics services."
+      },
+      "marathon26": {
+        "category": "Co-Organizer",
+        "title": "Baku Marathon 2026",
+        "desc": "Earth Group MMC also participated as co-organizer of the 2026 Baku Marathon. The scope included establishing information centers, organizing security and technical support, sponsorship coordination, and public relations management."
+      },
+      "bbq": {
+        "category": "Festival",
+        "title": "Baku BBQ Festival 2025",
+        "desc": "Earth Group MMC participated in organizing the BBQ Festival 2025. The company ensured food safety standards, prepared venues for participants, and coordinated cultural entertainment programs throughout the event."
+      },
+      "wine": {
+        "category": "Festival",
+        "title": "Wine Festival 2025",
+        "desc": "Earth Group MMC provided organizational support for the Wine Festival 2025. This included setting up exhibition pavilions, creating conditions for local and international producers, organizing master classes, and conducting tasting sessions for visitors."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to organize your next event?",
+    "subtitle": "Contact us today to discuss your requirements. We handle every detail.",
+    "button": "Get in Touch"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact Us",
+    "subtitle": "Have a project in mind? We would love to discuss how we can help you organize a flawless event.",
+    "details": "Our Details",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "address": "Baku, Azerbaijan",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your event...",
+      "submit": "Send Message",
+      "successTitle": "Message sent!",
+      "successText": "We will get back to you within 1-2 business days."
+    }
+  },
+  "aboutPage": {
+    "eyebrow": "About Us",
+    "title": "Who We Are",
+    "subtitle": "A trusted partner, a professional team.",
+    "missionEyebrow": "Our Mission",
+    "missionTitle": "Flawless Events, Every Time",
+    "missionText": "Earth Group MMC specializes in the management and organization of halls, trade fairs, congresses, conferences, and meeting venues. Leveraging professionalism and innovation, we deliver flawless preparation for every event.",
+    "visionEyebrow": "Our Vision",
+    "visionTitle": "The Leading Partner in the South Caucasus",
+    "visionText": "Earth Group MMC strives to become the most trusted name in professional event and venue management in the South Caucasus, recognized not only for operational excellence but for the lasting relationships we build with every client.",
+    "valuesEyebrow": "Our Values",
+    "values": {
+      "professionalism": {
+        "title": "Professionalism",
+        "desc": "We approach every event with the highest professional standards, treating every detail as essential."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We adapt to the evolving landscape of events, bringing modern solutions to every client."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "desc": "Our clients know us as a partner who keeps their word and stays focused on delivering results."
+      }
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "What We Offer",
+    "title": "Our Services",
+    "subtitle": "From a single meeting to an international congress, comprehensive solutions tailored to your requirements."
+  },
+  "footer": {
+    "tagline": "Azerbaijan's trusted partner for professional venue management, event organization, and congress services.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Ana Səhifə",
+    "about": "Haqqımızda",
+    "services": "Xidmətlər",
+    "projects": "Layihələr",
+    "contact": "Əlaqə",
+    "getInTouch": "Əlaqə saxlayın"
+  },
+  "hero": {
+    "eyebrow": "Earth Group MMC",
+    "title": "Məkan İdarəetməsi.",
+    "titleAccent": "Peşəkar",
+    "titleEnd": "Səviyyədə.",
+    "subtitle": "Biz Azərbaycanda salon, sərgi, ticarət yarmarkaları, konqres və konfransların idarə olunması və təşkilini peşəkar səviyyədə həyata keçiririk.",
+    "cta1": "Xidmətlərimiz",
+    "cta2": "Əlaqə"
+  },
+  "stats": {
+    "events": "Keçirilmiş Tədbir",
+    "venues": "Tərəfdaş Məkan",
+    "years": "İllik Təcrübə",
+    "satisfaction": "Müştəri Məmnuniyyəti"
+  },
+  "services": {
+    "eyebrow": "Xidmətlərimiz",
+    "title": "Tədbir Xidmətləri",
+    "subtitle": "Tək bir korporativ görüşdən tutmuş beynəlxalq miqyaslı konqreslərə qədər hər tədbirə mükəmməl hazırlıq.",
+    "viewAll": "Bütün xidmətlərə bax",
+    "items": {
+      "venue": {
+        "title": "Salon və Sərgi Məkanlarının İdarəsi",
+        "desc": "Salon və tədbirlərin keçirildiyi məkanların tam idarə olunması: planlaşdırma, qurulum və koordinasiya."
+      },
+      "fairs": {
+        "title": "Ticarət Yarmarkalarının Təşkili",
+        "desc": "B2B və B2C auditoriyası üçün ticarət yarmarkası və sərgi tədbirlərinin tam təşkili və irəliləyişi."
+      },
+      "congress": {
+        "title": "Konqres və Konfransların Keçirilməsi",
+        "desc": "Geniş miqyaslı konqres və sənaye konfransları üçün peşəkar logistika, koordinasiya və idarəetmə."
+      },
+      "meetings": {
+        "title": "Yığıncaqların Peşəkar İdarə Olunması",
+        "desc": "Korporativ iclaslar və icraçı yığıncaqlar üçün tam peşəkar idarəetmə həlləri."
+      },
+      "staffing": {
+        "title": "İşçi Heyətinin Təmini",
+        "desc": "Tədbirinizin hər rolu üçün peşəkar işçi heyəti, idarəetmə paketi daxilində və ya ayrıca."
+      },
+      "logistics": {
+        "title": "Logistika və Texniki Dəstək",
+        "desc": "Qurulumdan söküntüyə qədər tam logistika koordinasiyası və texniki dəstək xidmətləri."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Biz Kimik",
+    "title": "Tədbir Sektorunda Etibarlı Ad",
+    "p1": "\"Earth Group\" MMC salonların, ticarət yarmarkalarının, konqreslərin, konfransların və yığıncaqların keçirildiyi məkanların idarə olunması və təşkili üzrə ixtisaslaşmış şirkətdir. Şirkət tədbirlərin peşəkar səviyyədə təşkili, irəliləyişi və idarə olunması sahəsində xidmətlər göstərir.",
+    "p2": "Qısa müddət ərzində \"Earth Group\" MMC tədbir sektorunda etibarlı tərəfdaş kimi tanınmışdır. Bu uğur peşəkar kollektivin zəhməti, innovativ yanaşmalar və müştəri məmnuniyyətinə əsaslanan fəaliyyət strategiyası sayəsində əldə olunmuşdur.",
+    "learnMore": "Ətraflı məlumat",
+    "pillar1": {
+      "title": "Peşəkar Komanda",
+      "desc": "Hər tədbirə təcrübəli mütəxəssislərdən ibarət komanda ilə yanaşırıq."
+    },
+    "pillar2": {
+      "title": "Müştəri Yönümlü Yanaşma",
+      "desc": "Müştərilərimizin tələb və gözləntilərini əsas prioritet kimi qəbul edirik."
+    },
+    "pillar3": {
+      "title": "Sübut Edilmiş Nəticələr",
+      "desc": "Bakı Marafonu və beynəlxalq festivallar kimi böyük tədbirlərdə uğurla iştirak etmişik."
+    }
+  },
+  "projects": {
+    "eyebrow": "İşlərimiz",
+    "title": "Seçilmiş Layihələr",
+    "viewAll": "Bütün layihələrə bax",
+    "readMore": "Ətraflı →",
+    "page": {
+      "eyebrow": "İşlərimiz",
+      "title": "Layihələrimiz",
+      "subtitle": "Azərbaycanda uğurla həyata keçirdiyimiz tədbirlərin seçmə nümunələri.",
+      "back": "Ana Səhifəyə Qayıt"
+    },
+    "items": {
+      "marathon25": {
+        "category": "Həmtəşkilatçı",
+        "title": "Bakı Marafonu 2025",
+        "desc": "\"Earth Group\" MMC Bakı Marafonu 2025 tədbirində həmtəşkilatçı qismində çıxış etmişdir. Şirkət marafonun təşkilati işlərinin koordinasiyası, iştirakçıların qeydiyyat prosesi, könüllülərin idarə olunması və logistika xidmətlərinin təmin edilməsində mühüm rol oynamışdır."
+      },
+      "marathon26": {
+        "category": "Həmtəşkilatçı",
+        "title": "Bakı Marafonu 2026",
+        "desc": "2026-cı ildə keçirilən Bakı Marafonunda \"Earth Group\" MMC həmtəşkilatçı kimi fəaliyyət göstərmişdir. İnformasiya mərkəzlərinin qurulması, təhlükəsizlik və texniki dəstəyin təşkili, sponsorlarla əməkdaşlıq və ictimaiyyətlə əlaqələrin idarə olunması həyata keçirilmişdir."
+      },
+      "bbq": {
+        "category": "Festival",
+        "title": "Barbekü Festivalı 2025",
+        "desc": "\"Earth Group\" MMC Barbekü Festivalı 2025-in təşkilində iştirak etmişdir. Festival çərçivəsində qida təhlükəsizliyi standartlarının tətbiqi, iştirakçıların rahatlığı üçün məkanların hazırlanması və mədəni əyləncə proqramlarının koordinasiyası şirkət tərəfindən həyata keçirilmişdir."
+      },
+      "wine": {
+        "category": "Festival",
+        "title": "Şərab Festivalı 2025",
+        "desc": "\"Earth Group\" MMC Şərab Festivalı 2025 tədbirində təşkilati dəstək göstərmişdir. Sərgi pavilyonlarının qurulması, yerli və beynəlxalq istehsalçılar üçün şəraitin yaradılması, master-klasların təşkili və ziyarətçilər üçün dadım sessiyalarının keçirilməsi uğurla icra olunmuşdur."
+      }
+    }
+  },
+  "cta": {
+    "title": "Növbəti tədbirinizi birlikdə təşkil edək?",
+    "subtitle": "Tələblərinizi müzakirə etmək üçün bu gün bizimlə əlaqə saxlayın. Hər detalı biz idarə edirik.",
+    "button": "Əlaqə Saxlayın"
+  },
+  "contact": {
+    "eyebrow": "Əlaqə",
+    "title": "Bizimlə Əlaqə",
+    "subtitle": "Layihəniz var? Mükəmməl bir tədbir keçirməyinizə necə kömək edə biləcəyimizi müzakirə etməkdən məmnun olarıq.",
+    "details": "Əlaqə Məlumatları",
+    "emailLabel": "E-poçt",
+    "phoneLabel": "Telefon",
+    "addressLabel": "Ünvan",
+    "address": "Bakı, Azərbaycan",
+    "form": {
+      "name": "Ad",
+      "namePlaceholder": "Adınız",
+      "company": "Şirkət",
+      "companyPlaceholder": "Şirkətinizin adı",
+      "email": "E-poçt",
+      "emailPlaceholder": "siz@sirket.az",
+      "message": "Mesaj",
+      "messagePlaceholder": "Tədbiriniz haqqında məlumat verin...",
+      "submit": "Göndər",
+      "successTitle": "Mesaj göndərildi!",
+      "successText": "1-2 iş günü ərzində sizinlə əlaqə saxlayacağıq."
+    }
+  },
+  "aboutPage": {
+    "eyebrow": "Haqqımızda",
+    "title": "Biz Kimik",
+    "subtitle": "Etibarlı bir tərəfdaş, peşəkar bir komanda.",
+    "missionEyebrow": "Missiyamız",
+    "missionTitle": "Mükəmməl Tədbirlər, Hər Dəfə",
+    "missionText": "\"Earth Group\" MMC salonların, ticarət yarmarkalarının, konqreslərin, konfransların və yığıncaqların keçirildiyi məkanların idarə olunması və təşkili üzrə ixtisaslaşmış şirkətdir. Peşəkarlıq və innovasiyadan yararlanaraq hər tədbirə mükəmməl hazırlıq göstəririk.",
+    "visionEyebrow": "Vizyonumuz",
+    "visionTitle": "Cənubi Qafqazın Aparıcı Tərəfdaşı",
+    "visionText": "\"Earth Group\" MMC Cənubi Qafqazda peşəkar tədbir və məkan idarəetməsinin ən etibarlı adı olmağa çalışır. Bunu yalnız operativ mükəmməlliklə deyil, hər müştəri ilə qurduğumuz davamlı əlaqələrlə də sübut edirik.",
+    "valuesEyebrow": "Dəyərlərimiz",
+    "values": {
+      "professionalism": {
+        "title": "Peşəkarlıq",
+        "desc": "Hər tədbirə yüksək peşəkar standartlarla yanaşır, hər detalı əhəmiyyətli sayırıq."
+      },
+      "innovation": {
+        "title": "İnnovasiya",
+        "desc": "Sektordakı dəyişikliklərə uyum sağlayaraq müştərilərimizə müasir həllər təqdim edirik."
+      },
+      "reliability": {
+        "title": "Etibarlılıq",
+        "desc": "Müştərilərimiz bizi hər zaman sözümüzə sadiq, nəticəyə yönəlmiş bir tərəfdaş kimi tanıyır."
+      }
+    }
+  },
+  "servicesPage": {
+    "eyebrow": "Xidmətlərimiz",
+    "title": "Xidmətlərimiz",
+    "subtitle": "Tək bir görüşdən beynəlxalq konqreslərə qədər tələblərinizə uyğun hərtərəfli həllər."
+  },
+  "footer": {
+    "tagline": "Azərbaycanda peşəkar məkan idarəetməsi, tədbir təşkilatçılığı və konqres xidmətləri sahəsinin etibarlı tərəfdaşı.",
+    "quickLinks": "Sürətli Keçidlər",
+    "contact": "Əlaqə",
+    "rights": "Bütün hüquqlar qorunur."
+  }
+}
