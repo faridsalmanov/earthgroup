@@ -24,9 +24,7 @@ function LangSwitcher() {
           <button
             onClick={() => change(code)}
             className={`px-1.5 py-0.5 rounded transition-colors ${
-              i18n.language === code
-                ? 'text-brand-700 font-bold'
-                : 'text-gray-400 hover:text-brand-600'
+              i18n.language === code ? 'text-brand-600 font-bold' : 'text-gray-400 hover:text-gray-700'
             }`}
           >
             {label}
@@ -55,37 +53,44 @@ export default function Navbar() {
     to === '/' ? pathname === '/' : pathname.startsWith(to);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center">
-            <img src="/assets/logo/EG logo.png" alt="Earth Group MMC" className="h-10 w-auto object-contain" />
+    <header className="sticky top-0 z-50 bg-white border-b border-black/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+      <div className="max-w-[1240px] mx-auto px-6 sm:px-12">
+        <div className="flex items-center justify-between h-[70px]">
+          <Link href="/" className="flex items-center shrink-0">
+            <img
+              src="/assets/logo/EG logo.png"
+              alt="Earth Group MMC"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-5">
+          <nav className="hidden md:flex items-center gap-8">
             {links.map(({ to, label }) => (
               <Link
                 key={to}
                 href={to}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-[1rem] font-normal transition-colors ${
                   isActive(to)
-                    ? 'text-brand-700'
-                    : 'text-gray-600 hover:text-brand-600'
+                    ? 'text-brand-600 font-medium'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {label}
               </Link>
             ))}
-            <div className="w-px h-4 bg-gray-200" />
+          </nav>
+
+          <div className="hidden md:flex items-center gap-4">
             <LangSwitcher />
+            <div className="w-px h-5 bg-gray-200" />
             <Link
               href="/contact"
-              className="ml-1 px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
+              className="px-5 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors"
             >
               {t('nav.getInTouch')}
             </Link>
-          </nav>
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -106,30 +111,29 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="md:hidden border-t border-gray-100 bg-white px-4 pb-4 pt-2">
+        <nav className="md:hidden border-t border-black/[0.06] bg-white px-6 pb-5 pt-3">
           {links.map(({ to, label }) => (
             <Link
               key={to}
               href={to}
               onClick={() => setOpen(false)}
-              className={`block py-2 text-sm font-medium ${
-                isActive(to) ? 'text-brand-700' : 'text-gray-600 hover:text-brand-600'
+              className={`block py-2.5 text-sm font-normal border-b border-gray-100 last:border-0 ${
+                isActive(to) ? 'text-brand-600 font-medium' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {label}
             </Link>
           ))}
-          <div className="flex items-center gap-2 py-3 border-t border-gray-100 mt-2">
-            <span className="text-xs text-gray-400">Lang:</span>
+          <div className="flex items-center justify-between pt-4">
             <LangSwitcher />
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="px-5 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors"
+            >
+              {t('nav.getInTouch')}
+            </Link>
           </div>
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="block w-full text-center px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
-          >
-            {t('nav.getInTouch')}
-          </Link>
         </nav>
       )}
     </header>

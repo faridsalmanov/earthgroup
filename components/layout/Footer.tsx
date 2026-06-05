@@ -14,39 +14,85 @@ export default function Footer() {
     { label: t('nav.contact'),  to: '/contact' },
   ];
 
+  const serviceLinks = [
+    { label: t('services.items.venue.title'),   to: '/services' },
+    { label: t('services.items.fairs.title'),   to: '/services' },
+    { label: t('services.items.congress.title'), to: '/services' },
+    { label: t('services.items.meetings.title'), to: '/services' },
+    { label: t('services.items.staffing.title'), to: '/services' },
+  ];
+
   return (
-    <footer className="bg-gray-900 text-gray-400 mt-auto">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div>
-            <div className="inline-block bg-white rounded-lg px-3 py-2 mb-4">
-              <img src="/assets/logo/EG logo.png" alt="Earth Group MMC" className="h-10 w-auto object-contain" />
+    <footer className="bg-[#0a0a0a] text-white/50">
+      <div className="max-w-[1240px] mx-auto px-6 sm:px-12 py-[80px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Logo + tagline */}
+          <div className="sm:col-span-2 lg:col-span-1 space-y-4">
+            <div className="bg-white/10 rounded-lg px-3 py-2 inline-block">
+              <img
+                src="/assets/logo/EG logo.png"
+                alt="Earth Group MMC"
+                className="h-9 w-auto object-contain"
+              />
             </div>
-            <p className="text-sm leading-relaxed">{t('footer.tagline')}</p>
+            <p className="text-[0.9rem] leading-[1.8em]">{t('footer.tagline')}</p>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h4>
-            <ul className="space-y-2 text-sm">
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="text-white font-medium text-[1rem]">{t('footer.quickLinks')}</h4>
+            <ul className="space-y-3">
               {quickLinks.map(({ label, to }) => (
                 <li key={to}>
-                  <Link href={to} className="hover:text-brand-400 transition-colors">
+                  <Link
+                    href={to}
+                    className="text-[0.9rem] leading-[1.8em] hover:text-white transition-colors"
+                  >
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t('footer.contact')}</h4>
-            <ul className="space-y-2 text-sm">
-              <li>info@earthgroup.az</li>
-              <li>+994 12 000 00 00</li>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h4 className="text-white font-medium text-[1rem]">{t('nav.services')}</h4>
+            <ul className="space-y-3">
+              {serviceLinks.map(({ label, to }) => (
+                <li key={label}>
+                  <Link
+                    href={to}
+                    className="text-[0.9rem] leading-[1.8em] hover:text-white transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h4 className="text-white font-medium text-[1rem]">{t('footer.contact')}</h4>
+            <ul className="space-y-3 text-[0.9rem] leading-[1.8em]">
+              <li>
+                <a href="mailto:info@earthgroup.az" className="hover:text-white transition-colors">
+                  info@earthgroup.az
+                </a>
+              </li>
+              <li>
+                <a href="tel:+994120000000" className="hover:text-white transition-colors">
+                  +994 12 000 00 00
+                </a>
+              </li>
               <li>{t('contact.address')}</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-12 pt-6 text-center text-xs">
-          &copy; {new Date().getFullYear()} Earth Group MMC. {t('footer.rights')}
+
+        <div className="border-t border-white/[0.07] mt-[60px] pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs">
+          <span>© {new Date().getFullYear()} Earth Group MMC. {t('footer.rights')}</span>
         </div>
       </div>
     </footer>
