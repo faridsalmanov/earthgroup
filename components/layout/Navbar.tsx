@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
@@ -24,12 +24,12 @@ function LangSwitcher() {
           <button
             onClick={() => change(code)}
             className={`px-1.5 py-0.5 rounded transition-colors ${
-              i18n.language === code ? 'text-brand-600 font-bold' : 'text-gray-400 hover:text-gray-700'
+              i18n.language === code ? 'text-white font-bold' : 'text-white/50 hover:text-white/80'
             }`}
           >
             {label}
           </button>
-          {i < langs.length - 1 && <span className="text-gray-200 select-none">|</span>}
+          {i < langs.length - 1 && <span className="text-white/20 select-none">|</span>}
         </span>
       ))}
     </div>
@@ -53,89 +53,112 @@ export default function Navbar() {
     to === '/' ? pathname === '/' : pathname.startsWith(to);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-black/[0.06] shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-      <div className="max-w-[1240px] mx-auto px-6 sm:px-12">
-        <div className="flex items-center justify-between h-[70px]">
-          <Link href="/" className="flex items-center shrink-0">
-            <img
-              src="/assets/logo/EG logo.png"
-              alt="Earth Group MMC"
-              className="h-10 w-auto object-contain"
-            />
-          </Link>
-
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {links.map(({ to, label }) => (
-              <Link
-                key={to}
-                href={to}
-                className={`text-[1rem] font-normal transition-colors ${
-                  isActive(to)
-                    ? 'text-brand-600 font-medium'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="hidden md:flex items-center gap-4">
-            <LangSwitcher />
-            <div className="w-px h-5 bg-gray-200" />
-            <Link
-              href="/contact"
-              className="px-5 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors"
-            >
-              {t('nav.getInTouch')}
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-brand-700"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+    <>
+      {/* Floating pill navbar */}
+      <header className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6">
+        <div className="max-w-[1240px] mx-auto">
+          <div
+            className="flex items-center justify-between h-[60px] px-5 rounded-full"
+            style={{
+              background: 'rgba(15, 15, 15, 0.65)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {open ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-      </div>
+            {/* Logo */}
+            <Link href="/" className="flex items-center shrink-0">
+              <img
+                src="/assets/logo/EG logo.png"
+                alt="Earth Group MMC"
+                className="h-8 w-auto object-contain brightness-[10] invert"
+              />
+            </Link>
 
-      {/* Mobile menu */}
-      {open && (
-        <nav className="md:hidden border-t border-black/[0.06] bg-white px-6 pb-5 pt-3">
-          {links.map(({ to, label }) => (
-            <Link
-              key={to}
-              href={to}
-              onClick={() => setOpen(false)}
-              className={`block py-2.5 text-sm font-normal border-b border-gray-100 last:border-0 ${
-                isActive(to) ? 'text-brand-600 font-medium' : 'text-gray-600 hover:text-gray-900'
-              }`}
+            {/* Desktop nav links */}
+            <nav className="hidden md:flex items-center gap-7">
+              {links.map(({ to, label }) => (
+                <Link
+                  key={to}
+                  href={to}
+                  className={`text-[0.95rem] font-normal transition-colors ${
+                    isActive(to) ? 'text-white font-medium' : 'text-white/60 hover:text-white'
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Right side: lang + CTA */}
+            <div className="hidden md:flex items-center gap-4">
+              <LangSwitcher />
+              <Link
+                href="/contact"
+                className="px-5 py-2 text-white text-sm font-medium rounded-full transition-colors"
+                style={{ border: '1px solid rgba(255,255,255,0.35)' }}
+                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+              >
+                {t('nav.getInTouch')}
+              </Link>
+            </div>
+
+            {/* Mobile burger */}
+            <button
+              className="md:hidden p-2 text-white/70 hover:text-white"
+              onClick={() => setOpen(!open)}
+              aria-label="Toggle menu"
             >
-              {label}
-            </Link>
-          ))}
-          <div className="flex items-center justify-between pt-4">
-            <LangSwitcher />
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="px-5 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors"
-            >
-              {t('nav.getInTouch')}
-            </Link>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {open ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
-        </nav>
-      )}
-    </header>
+
+          {/* Mobile dropdown */}
+          {open && (
+            <div
+              className="md:hidden mt-2 rounded-2xl overflow-hidden"
+              style={{
+                background: 'rgba(15, 15, 15, 0.90)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              {links.map(({ to, label }) => (
+                <Link
+                  key={to}
+                  href={to}
+                  onClick={() => setOpen(false)}
+                  className={`block px-6 py-3.5 text-sm border-b border-white/[0.06] last:border-0 transition-colors ${
+                    isActive(to) ? 'text-white font-medium' : 'text-white/60 hover:text-white'
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
+              <div className="flex items-center justify-between px-6 py-4">
+                <LangSwitcher />
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="px-5 py-2 text-white text-sm font-medium rounded-full"
+                  style={{ border: '1px solid rgba(255,255,255,0.35)' }}
+                >
+                  {t('nav.getInTouch')}
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </header>
+
+    </>
   );
 }
