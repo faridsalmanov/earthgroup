@@ -277,26 +277,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── ABOUT FULL-BLEED ─── */}
-      <section className="relative py-[250px] sm:py-[350px] px-6 sm:px-12 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/assets/hero/event2.jpg')" }} />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-[1240px] mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-[50px]">
-            <AnimateIn className="flex-1" variants={fadeLeft} duration={0.8}>
-              <h2 className="text-3xl sm:text-[3.1rem] font-medium leading-[1.2em] tracking-[-0.02em] text-white max-w-[600px]">
-                {t('about.p2')}
-              </h2>
-            </AnimateIn>
-            <AnimateIn delay={0.25}>
-              <Link href="/about" className="shrink-0 px-7 py-3.5 border border-white/30 text-white font-medium rounded-lg hover:bg-white/15 transition-colors">
-                {t('about.learnMore')}
-              </Link>
-            </AnimateIn>
-          </div>
-        </div>
-      </section>
-
       {/* ─── WHY CHOOSE US ─── */}
       <section className="bg-white py-[125px] px-6 sm:px-12">
         <div className="max-w-[1240px] mx-auto space-y-[75px]">
