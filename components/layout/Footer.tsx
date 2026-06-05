@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import logo from '../../assets/logo/EG logo.png';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="inline-block bg-white rounded-lg px-3 py-2 mb-4">
-              <img src={logo} alt="Earth Group MMC" className="h-10 w-auto object-contain" />
+              <img src="/assets/logo/EG logo.png" alt="Earth Group MMC" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed">{t('footer.tagline')}</p>
           </div>
@@ -28,7 +29,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {quickLinks.map(({ label, to }) => (
                 <li key={to}>
-                  <Link to={to} className="hover:text-brand-400 transition-colors">
+                  <Link href={to} className="hover:text-brand-400 transition-colors">
                     {label}
                   </Link>
                 </li>

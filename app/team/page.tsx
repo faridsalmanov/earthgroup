@@ -1,10 +1,12 @@
+'use client';
+
 const members = [
-  { name: 'Alex Johnson', role: 'CEO & Founder', initials: 'AJ' },
-  { name: 'Sarah Lee', role: 'Chief Operations Officer', initials: 'SL' },
-  { name: 'Marcus Rivera', role: 'Head of Sustainability', initials: 'MR' },
-  { name: 'Priya Kapoor', role: 'Lead Consultant', initials: 'PK' },
-  { name: 'David Chen', role: 'Digital Strategy Director', initials: 'DC' },
-  { name: 'Emma White', role: 'Marketing Manager', initials: 'EW' },
+  { name: 'Alex Johnson',  role: 'CEO & Founder',             initials: 'AJ' },
+  { name: 'Sarah Lee',     role: 'Chief Operations Officer',  initials: 'SL' },
+  { name: 'Marcus Rivera', role: 'Head of Sustainability',    initials: 'MR' },
+  { name: 'Priya Kapoor',  role: 'Lead Consultant',           initials: 'PK' },
+  { name: 'David Chen',    role: 'Digital Strategy Director', initials: 'DC' },
+  { name: 'Emma White',    role: 'Marketing Manager',         initials: 'EW' },
 ];
 
 export default function Team() {

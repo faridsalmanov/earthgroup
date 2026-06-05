@@ -1,18 +1,14 @@
+'use client';
+
 import { useTranslation } from 'react-i18next';
-import venueImg from '../assets/services/venue_management.jpg';
-import fairsImg from '../assets/services/exhibitions.jpg';
-import congressImg from '../assets/services/conference.jpg';
-import meetingsImg from '../assets/services/meeting.jpg';
-import staffingImg from '../assets/services/staff.jpg';
-import logisticsImg from '../assets/services/tech.jpeg';
 
 const services = [
-  { key: 'venue',     image: venueImg },
-  { key: 'fairs',     image: fairsImg },
-  { key: 'congress',  image: congressImg },
-  { key: 'meetings',  image: meetingsImg },
-  { key: 'staffing',  image: staffingImg },
-  { key: 'logistics', image: logisticsImg },
+  { key: 'venue',     image: '/assets/services/venue_management.jpg' },
+  { key: 'fairs',     image: '/assets/services/exhibitions.jpg' },
+  { key: 'congress',  image: '/assets/services/conference.jpg' },
+  { key: 'meetings',  image: '/assets/services/meeting.jpg' },
+  { key: 'staffing',  image: '/assets/services/staff.jpg' },
+  { key: 'logistics', image: '/assets/services/tech.jpeg' },
 ];
 
 export default function Services() {
@@ -20,7 +16,6 @@ export default function Services() {
 
   return (
     <>
-      {/* Header */}
       <section className="bg-brand-900 py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <h1 className="font-display text-4xl sm:text-5xl text-white font-bold mb-4">{t('servicesPage.title')}</h1>
@@ -28,16 +23,11 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services list */}
       <section className="bg-white">
         {services.map(({ key, image }, index) => {
           const isEven = index % 2 === 0;
           return (
-            <div
-              key={key}
-              className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[420px]`}
-            >
-              {/* Image */}
+            <div key={key} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[420px]`}>
               <div className="w-full lg:w-1/2 relative overflow-hidden min-h-[280px] lg:min-h-0">
                 <img
                   src={image}
@@ -46,8 +36,6 @@ export default function Services() {
                 />
                 <div className="absolute inset-0 bg-brand-900/30" />
               </div>
-
-              {/* Text */}
               <div className={`w-full lg:w-1/2 flex items-center px-8 py-14 lg:px-16 ${isEven ? 'bg-white' : 'bg-brand-50'}`}>
                 <div className="max-w-md">
                   <div className="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3">

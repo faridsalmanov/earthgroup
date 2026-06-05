@@ -1,24 +1,25 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+'use client';
+
 import { useState, useEffect } from 'react';
-import marathon25Img from '../assets/projects/baku marathon/marathon_2025.jpg';
-import bbqImg from '../assets/projects/bbq/bbq.jpg';
-import wineImg from '../assets/projects/serab/serab1.jpg';
-import heroImg1 from '../assets/hero/event1.jpg';
-import heroImg2 from '../assets/hero/event2.jpg';
-import heroImg3 from '../assets/hero/event3.jpg';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
-const heroSlides = [heroImg1, heroImg2, heroImg3];
+const heroSlides = [
+  '/assets/hero/event1.jpg',
+  '/assets/hero/event2.jpg',
+  '/assets/hero/event3.jpg',
+];
 
-const projectImages = {
-  marathon25: marathon25Img,
-  bbq: bbqImg,
-  wine: wineImg,
+const projectImages: Record<string, string> = {
+  marathon25: '/assets/projects/baku marathon/marathon_2025.jpg',
+  bbq:        '/assets/projects/bbq/bbq.jpg',
+  wine:       '/assets/projects/serab/serab1.jpg',
 };
 
 const serviceKeys = ['venue', 'fairs', 'congress'];
+const projectKeys = ['marathon25', 'bbq', 'wine'];
 
-const serviceIcons = {
+const serviceIcons: Record<string, React.ReactNode> = {
   venue: (
     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -37,28 +38,7 @@ const serviceIcons = {
         d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
     </svg>
   ),
-  meetings: (
-    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-    </svg>
-  ),
-  staffing: (
-    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-  ),
-  logistics: (
-    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-  ),
 };
-
-const projectKeys = ['marathon25', 'bbq', 'wine'];
 
 export default function Home() {
   const { t } = useTranslation();
@@ -79,9 +59,8 @@ export default function Home() {
 
   return (
     <>
-      {/* ── HERO ── */}
+      {/* HERO */}
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-        {/* Slideshow backgrounds */}
         {heroSlides.map((src, i) => (
           <div
             key={i}
@@ -96,17 +75,11 @@ export default function Home() {
             }}
           />
         ))}
-
-        {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80 pointer-events-none" />
-
-        {/* Subtle vignette */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%)' }}
         />
-
-        {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto">
           <div className="inline-block px-4 py-1.5 mb-6 border border-white/30 rounded-full text-white/70 text-xs font-semibold uppercase tracking-widest backdrop-blur-sm">
             Earth Group MMC
@@ -120,16 +93,14 @@ export default function Home() {
             {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/services" className="px-8 py-3.5 bg-white text-brand-900 font-semibold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
+            <Link href="/services" className="px-8 py-3.5 bg-white text-brand-900 font-semibold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
               {t('hero.cta1')}
             </Link>
-            <Link to="/contact" className="px-8 py-3.5 border border-white/50 text-white font-semibold rounded-lg hover:bg-white/15 backdrop-blur-sm transition-colors">
+            <Link href="/contact" className="px-8 py-3.5 border border-white/50 text-white font-semibold rounded-lg hover:bg-white/15 backdrop-blur-sm transition-colors">
               {t('hero.cta2')}
             </Link>
           </div>
         </div>
-
-        {/* Slide indicators */}
         <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {heroSlides.map((_, i) => (
             <button
@@ -141,8 +112,6 @@ export default function Home() {
             />
           ))}
         </div>
-
-        {/* Scroll arrow */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce z-10">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -150,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── STATS ── */}
+      {/* STATS */}
       <section className="bg-brand-800 py-14 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
           {statsData.map(({ value, key }, i) => (
@@ -162,7 +131,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
+      {/* SERVICES */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
@@ -182,7 +151,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link to="/services" className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all">
+            <Link href="/services" className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all">
               {t('services.viewAll')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -192,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ABOUT TEASER ── */}
+      {/* ABOUT TEASER */}
       <section className="bg-brand-50 py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -200,7 +169,7 @@ export default function Home() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-900 mb-6">{t('about.title')}</h2>
             <p className="text-gray-600 leading-relaxed mb-4">{t('about.p1')}</p>
             <p className="text-gray-600 leading-relaxed mb-8">{t('about.p2')}</p>
-            <Link to="/about" className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all">
+            <Link href="/about" className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all">
               {t('about.learnMore')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -229,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PROJECTS TEASER ── */}
+      {/* PROJECTS TEASER */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4">
@@ -237,7 +206,7 @@ export default function Home() {
               <p className="text-brand-600 text-sm font-semibold uppercase tracking-widest mb-3">{t('projects.eyebrow')}</p>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-900">{t('projects.title')}</h2>
             </div>
-            <Link to="/projects" className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all whitespace-nowrap">
+            <Link href="/projects" className="inline-flex items-center gap-2 text-brand-700 font-semibold hover:gap-3 transition-all whitespace-nowrap">
               {t('projects.viewAll')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -256,7 +225,7 @@ export default function Home() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-sm font-semibold text-brand-900 mb-2 leading-snug">{t(`projects.items.${key}.title`)}</h3>
-                  <Link to="/projects" className="text-brand-600 text-xs font-semibold hover:text-brand-700 transition-colors">
+                  <Link href="/projects" className="text-brand-600 text-xs font-semibold hover:text-brand-700 transition-colors">
                     {t('projects.readMore')}
                   </Link>
                 </div>
@@ -266,13 +235,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA BANNER ── */}
+      {/* CTA BANNER */}
       <section className="bg-brand-900 py-24 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="w-16 h-0.5 bg-brand-500 mx-auto mb-8" />
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">{t('cta.title')}</h2>
           <p className="text-brand-200 text-lg mb-10">{t('cta.subtitle')}</p>
-          <Link to="/contact" className="inline-block px-10 py-4 bg-white text-brand-900 font-bold rounded-lg hover:bg-brand-50 transition-colors text-base">
+          <Link href="/contact" className="inline-block px-10 py-4 bg-white text-brand-900 font-bold rounded-lg hover:bg-brand-50 transition-colors text-base">
             {t('cta.button')}
           </Link>
         </div>

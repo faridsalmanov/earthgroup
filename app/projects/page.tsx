@@ -1,16 +1,15 @@
+'use client';
+
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import marathon25Img from '../assets/projects/baku marathon/marathon_2025.jpg';
-import marathon26Img from '../assets/projects/baku marathon/marathon_2026.jpg';
-import bbqImg from '../assets/projects/bbq/bbq.jpg';
-import wineImg from '../assets/projects/serab/serab1.jpg';
 
 const projectKeys = ['marathon25', 'marathon26', 'bbq', 'wine'];
 
-const projectImages = {
-  marathon25: marathon25Img,
-  marathon26: marathon26Img,
-  bbq: bbqImg,
-  wine: wineImg,
+const projectImages: Record<string, string> = {
+  marathon25: '/assets/projects/baku marathon/marathon_2025.jpg',
+  marathon26: '/assets/projects/baku marathon/marathon_2026.jpg',
+  bbq:        '/assets/projects/bbq/bbq.jpg',
+  wine:       '/assets/projects/serab/serab1.jpg',
 };
 
 export default function Projects() {

@@ -1,29 +1,25 @@
+'use client';
+
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
-// EmailJS configuration — create a free account at https://www.emailjs.com/
-// then replace these three values with your own Service ID, Template ID, and Public Key.
 const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
 
-// Required template variables in your EmailJS template:
-//   {{from_name}}    — sender's name
-//   {{from_email}}   — sender's email
-//   {{company}}      — sender's company
-//   {{message}}      — message body
-// Set the "To Email" in the template to: info@earthgroup.az
+type FormState = { name: string; email: string; company: string; message: string };
+type Status = 'idle' | 'sending' | 'success' | 'error';
 
 export default function Contact() {
   const { t } = useTranslation();
-  const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [form, setForm] = useState<FormState>({ name: '', email: '', company: '', message: '' });
+  const [status, setStatus] = useState<Status>('idle');
 
-  const handleChange = (e) =>
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
     try {
@@ -55,7 +51,6 @@ export default function Contact() {
 
       <section className="bg-white py-20 px-4">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact info */}
           <div>
             <h2 className="font-display text-2xl font-bold text-brand-900 mb-6">{t('contact.details')}</h2>
             <ul className="space-y-5 text-gray-600 text-sm">
@@ -99,7 +94,6 @@ export default function Contact() {
             </ul>
           </div>
 
-          {/* Form */}
           <div>
             {status === 'success' ? (
               <div className="rounded-xl bg-brand-50 border border-brand-200 p-8 text-center">

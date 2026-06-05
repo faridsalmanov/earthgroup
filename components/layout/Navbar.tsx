@@ -1,7 +1,9 @@
+'use client';
+
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import logo from '../../assets/logo/EG logo.png';
 
 const langs = [
   { code: 'az', label: 'AZ' },
@@ -11,7 +13,7 @@ const langs = [
 
 function LangSwitcher() {
   const { i18n } = useTranslation();
-  const change = (code) => {
+  const change = (code: string) => {
     i18n.changeLanguage(code);
     localStorage.setItem('lang', code);
   };
@@ -39,6 +41,7 @@ function LangSwitcher() {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
+  const pathname = usePathname();
 
   const links = [
     { to: '/',         label: t('nav.home') },
@@ -48,36 +51,36 @@ export default function Navbar() {
     { to: '/contact',  label: t('nav.contact') },
   ];
 
+  const isActive = (to: string) =>
+    to === '/' ? pathname === '/' : pathname.startsWith(to);
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="Earth Group MMC" className="h-10 w-auto object-contain" />
+          <Link href="/" className="flex items-center">
+            <img src="/assets/logo/EG logo.png" alt="Earth Group MMC" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-5">
             {links.map(({ to, label }) => (
-              <NavLink
+              <Link
                 key={to}
-                to={to}
-                end={to === '/'}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'text-brand-700'
-                      : 'text-gray-600 hover:text-brand-600'
-                  }`
-                }
+                href={to}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(to)
+                    ? 'text-brand-700'
+                    : 'text-gray-600 hover:text-brand-600'
+                }`}
               >
                 {label}
-              </NavLink>
+              </Link>
             ))}
             <div className="w-px h-4 bg-gray-200" />
             <LangSwitcher />
             <Link
-              to="/contact"
+              href="/contact"
               className="ml-1 px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
             >
               {t('nav.getInTouch')}
@@ -105,26 +108,23 @@ export default function Navbar() {
       {open && (
         <nav className="md:hidden border-t border-gray-100 bg-white px-4 pb-4 pt-2">
           {links.map(({ to, label }) => (
-            <NavLink
+            <Link
               key={to}
-              to={to}
-              end={to === '/'}
+              href={to}
               onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                `block py-2 text-sm font-medium ${
-                  isActive ? 'text-brand-700' : 'text-gray-600 hover:text-brand-600'
-                }`
-              }
+              className={`block py-2 text-sm font-medium ${
+                isActive(to) ? 'text-brand-700' : 'text-gray-600 hover:text-brand-600'
+              }`}
             >
               {label}
-            </NavLink>
+            </Link>
           ))}
           <div className="flex items-center gap-2 py-3 border-t border-gray-100 mt-2">
             <span className="text-xs text-gray-400">Lang:</span>
             <LangSwitcher />
           </div>
           <Link
-            to="/contact"
+            href="/contact"
             onClick={() => setOpen(false)}
             className="block w-full text-center px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
           >
