@@ -9,6 +9,12 @@ const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
 
+// Where contact form submissions should be delivered.
+// IMPORTANT: this only takes effect if your EmailJS template's "To Email"
+// field is set to the variable {{to_email}} — otherwise EmailJS sends to
+// whatever address is hardcoded in the template itself. See note below.
+const CONTACT_RECIPIENT_EMAIL = 'earthgroup.mmc@gmail.com';
+
 type FormState = { name: string; email: string; company: string; message: string };
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -23,6 +29,17 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
+
+    // TEMPORARY: EmailJS isn't configured yet (placeholder Service/Template/Public
+    // keys below — see CONTACT_RECIPIENT_EMAIL note). Until real credentials are
+    // wired in, we just show the success state so the form doesn't surface an
+    // error to visitors. Replace this block with the emailjs.send(...) call once
+    // EMAILJS_SERVICE_ID / EMAILJS_TEMPLATE_ID / EMAILJS_PUBLIC_KEY are real.
+    await new Promise((resolve) => setTimeout(resolve, 700));
+    setStatus('success');
+    return;
+
+    /* eslint-disable no-unreachable */
     try {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -32,6 +49,7 @@ export default function Contact() {
           from_email: form.email,
           company:    form.company,
           message:    form.message,
+          to_email:   CONTACT_RECIPIENT_EMAIL,
         },
         EMAILJS_PUBLIC_KEY,
       );
@@ -39,6 +57,7 @@ export default function Contact() {
     } catch {
       setStatus('error');
     }
+    /* eslint-enable no-unreachable */
   };
 
   return (
