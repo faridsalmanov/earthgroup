@@ -21,6 +21,16 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  icons: {
+    icon: [
+      { url: '/assets/fav/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/assets/fav/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/assets/fav/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/assets/fav/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/assets/fav/favicon.ico',
+    apple: '/assets/fav/apple-touch-icon.png',
+  },
   openGraph: {
     siteName: 'Earth Group MMC',
     locale: 'az_AZ',
