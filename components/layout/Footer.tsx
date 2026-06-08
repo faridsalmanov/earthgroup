@@ -84,13 +84,13 @@ export default function Footer() {
             <h4 className="text-white font-medium text-[1rem]">{t('footer.contact')}</h4>
             <ul className="space-y-3 text-[0.9rem] leading-[1.8em]">
               <li>
-                <a href="mailto:info@earthgroup.az" className="hover:text-white transition-colors">
-                  info@earthgroup.az
+                <a href="mailto:earthgroup.mmc@gmail.com" className="hover:text-white transition-colors">
+                  earthgroup.mmc@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+994120000000" className="hover:text-white transition-colors">
-                  +994 12 000 00 00
+                <a href="tel:+994518955883" className="hover:text-white transition-colors">
+                  +994 51 895 58 83
                 </a>
               </li>
               <li>{t('contact.address')}</li>

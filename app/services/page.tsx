@@ -1,70 +1,32 @@
-'use client';
+import type { Metadata } from 'next';
+import ServicesClient from './ServicesClient';
 
-import { useTranslation } from 'react-i18next';
-import { AnimateIn, fadeUp, fadeLeft, scaleIn } from '@/components/AnimateIn';
+export const metadata: Metadata = {
+  title: 'Xidmətlərimiz | Earth Group MMC',
+  description:
+    'Məkan idarəetməsi, sərgi və ticarət yarmarkalarının təşkili, konqres və konfrans xidmətləri, görüşlərin idarə olunması, kadr təminatı və texniki-loqistik dəstək — tək bir görüşdən beynəlxalq tədbirlərə qədər hərtərəfli həllər.',
+  keywords: [
+    'tədbir xidmətləri',
+    'məkan idarəetməsi',
+    'sərgi təşkili',
+    'konqres xidmətləri',
+    'konfrans təşkili',
+    'kadr təminatı',
+    'event services Azerbaijan',
+  ],
+  openGraph: {
+    title: 'Xidmətlərimiz | Earth Group MMC',
+    description:
+      'Tək bir korporativ görüşdən beynəlxalq konqreslərə qədər tələblərinizə uyğun hərtərəfli tədbir idarəetmə həlləri.',
+    type: 'website',
+    locale: 'az_AZ',
+    siteName: 'Earth Group MMC',
+  },
+  alternates: {
+    canonical: '/services',
+  },
+};
 
-const services = [
-  { key: 'venue',     image: '/assets/services/venue_management.jpg' },
-  { key: 'fairs',     image: '/assets/services/exhibitions.jpg' },
-  { key: 'congress',  image: '/assets/services/conference.jpg' },
-  { key: 'meetings',  image: '/assets/services/meeting.jpg' },
-  { key: 'staffing',  image: '/assets/services/staff.jpg' },
-  { key: 'logistics', image: '/assets/services/tech.jpeg' },
-];
-
-export default function Services() {
-  const { t } = useTranslation();
-
-  return (
-    <>
-      <section className="bg-brand-900 flex items-center justify-center text-center px-4" style={{ minHeight: '280px', paddingTop: '100px', paddingBottom: '60px' }}>
-        <AnimateIn variants={fadeUp} duration={0.7}>
-          <h1 className="font-display text-4xl sm:text-[3.1rem] text-white font-medium tracking-[-0.02em] leading-[1.2em]">{t('servicesPage.title')}</h1>
-        </AnimateIn>
-      </section>
-
-      <section className="bg-white">
-        {services.map(({ key, image }, index) => {
-          const isEven = index % 2 === 0;
-          return (
-            <div key={key} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[420px]`}>
-              {/* Image */}
-              <AnimateIn
-                className="w-full lg:w-1/2 relative overflow-hidden min-h-[280px] lg:min-h-0"
-                variants={scaleIn}
-                duration={0.8}
-              >
-                <img
-                  src={image}
-                  alt={t(`services.items.${key}.title`)}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-brand-900/30" />
-              </AnimateIn>
-
-              {/* Text */}
-              <AnimateIn
-                className={`w-full lg:w-1/2 flex items-center px-8 py-14 lg:px-16 ${isEven ? 'bg-white' : 'bg-brand-50'}`}
-                variants={isEven ? fadeLeft : fadeUp}
-                delay={0.15}
-                duration={0.7}
-              >
-                <div className="max-w-md">
-                  <div className="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3">
-                    0{index + 1}
-                  </div>
-                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-brand-900 mb-4">
-                    {t(`services.items.${key}.title`)}
-                  </h2>
-                  <p className="text-gray-500 leading-relaxed">
-                    {t(`services.items.${key}.desc`)}
-                  </p>
-                </div>
-              </AnimateIn>
-            </div>
-          );
-        })}
-      </section>
-    </>
-  );
+export default function Page() {
+  return <ServicesClient />;
 }
