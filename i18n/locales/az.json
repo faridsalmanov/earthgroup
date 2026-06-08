@@ -23,7 +23,7 @@
     "satisfaction": "Müştəri Məmnuniyyəti"
   },
   "services": {
-    "eyebrow": "Xidmətlərimiz",
+    "eyebrow": "Nə təklif edirik?",
     "title": "Tədbir Xidmətləri",
     "subtitle": "Tək bir korporativ görüşdən tutmuş beynəlxalq miqyaslı konqreslərə qədər hər tədbirə mükəmməl hazırlıq.",
     "viewAll": "Bütün xidmətlərə bax",
@@ -109,7 +109,7 @@
   },
   "cta": {
     "title": "Növbəti tədbirinizi birlikdə təşkil edək?",
-    "subtitle": "Tələblərinizi müzakirə etmək üçün bu gün bizimlə əlaqə saxlayın. Hər detalı biz idarə edirik.",
+    "subtitle": "Bizimlə əlaqə saxlayaraq tədbiriniz üçün peşəkar və etibarlı təşkilatçılıq xidmətləri əldə edə bilərsiniz. Komandamız müraciətlərinizi operativ şəkildə cavablandırmağa hazırdır.",
     "button": "Əlaqə Saxlayın"
   },
   "contact": {
@@ -139,25 +139,22 @@
     "eyebrow": "Haqqımızda",
     "title": "Biz Kimik",
     "subtitle": "Etibarlı bir tərəfdaş, peşəkar bir komanda.",
-    "missionEyebrow": "Missiyamız",
-    "missionTitle": "Mükəmməl Tədbirlər, Hər Dəfə",
+    "missionTitle": "Bizim Missiyamız",
     "missionText": "\"Earth Group\" MMC salonların, ticarət yarmarkalarının, konqreslərin, konfransların və yığıncaqların keçirildiyi məkanların idarə olunması və təşkili üzrə ixtisaslaşmış şirkətdir. Peşəkarlıq və innovasiyadan yararlanaraq hər tədbirə mükəmməl hazırlıq göstəririk.",
-    "visionEyebrow": "Vizyonumuz",
-    "visionTitle": "Cənubi Qafqazın Aparıcı Tərəfdaşı",
-    "visionText": "\"Earth Group\" MMC Cənubi Qafqazda peşəkar tədbir və məkan idarəetməsinin ən etibarlı adı olmağa çalışır. Bunu yalnız operativ mükəmməlliklə deyil, hər müştəri ilə qurduğumuz davamlı əlaqələrlə də sübut edirik.",
-    "valuesEyebrow": "Dəyərlərimiz",
-    "values": {
+    "principlesEyebrow": "Əsas prinsiplərimiz",
+    "principlesSubtitle": "Uğurumuzun əsasını təşkil edən dəyərlər",
+    "principles": {
+      "safety": {
+        "title": "Təhlükəsizlik",
+        "desc": "Tədbirlərin bütün mərhələlərində iştirakçıların və məkanların təhlükəsizliyini əsas prioritet hesab edirik. Hər tədbirə dair risklər əvvəlcədən qiymətləndirilir, zəruri tədbirlər görülür."
+      },
+      "quality": {
+        "title": "Keyfiyyət",
+        "desc": "Keyfiyyət bizim üçün fəaliyyətin əsas prinsipidir – müştərilərimizin etimadını qazanmağımızın və sektorda etibarlı mövqe tutmağımızın əsas səbəbidir."
+      },
       "professionalism": {
         "title": "Peşəkarlıq",
-        "desc": "Hər tədbirə yüksək peşəkar standartlarla yanaşır, hər detalı əhəmiyyətli sayırıq."
-      },
-      "innovation": {
-        "title": "İnnovasiya",
-        "desc": "Sektordakı dəyişikliklərə uyum sağlayaraq müştərilərimizə müasir həllər təqdim edirik."
-      },
-      "reliability": {
-        "title": "Etibarlılıq",
-        "desc": "Müştərilərimiz bizi hər zaman sözümüzə sadiq, nəticəyə yönəlmiş bir tərəfdaş kimi tanıyır."
+        "desc": "Verdiyimiz öhdəliklərə daim sadiq qalır, tədbirləri vaxtında və qüsursuz şəkildə həyata keçiririk. Təcrübəli komandamızla hər layihəni beynəlxalq standartlara uyğun icra edirik."
       }
     }
   },
@@ -165,6 +162,37 @@
     "eyebrow": "Xidmətlərimiz",
     "title": "Xidmətlərimiz",
     "subtitle": "Tək bir görüşdən beynəlxalq konqreslərə qədər tələblərinizə uyğun hərtərəfli həllər."
+  },
+  "home": {
+    "learnMore": "Ətraflı →",
+    "eventOutcomes": "Tədbir nəticələri",
+    "whyUs": {
+      "eyebrow": "Niyə bizi seçməli?",
+      "title": "Mükəmməl tədbirlər həyata keçirməyə çalışırıq",
+      "desc": "Ən yüksək xidmət keyfiyyəti, innovativ həllər və hər sahədə gözləntiləri aşmağa sadiqik."
+    },
+    "process": {
+      "eyebrow": "Bizim proses",
+      "desc": "Məqsədlərinizi anlamağa və hər dəfə mükəmməl nəticələr əldə etməyə imkan verən çevik, müştəri yönümlü bir proses hazırlamışıq.",
+      "learnMore": "Ətraflı",
+      "steps": {
+        "discovery": { "title": "Kəşfiyyat", "desc": "Tədbirinizin məqsəd və tələblərini dərindən öyrənirik." },
+        "planning":  { "title": "Planlaşdırma", "desc": "Tədbirinizin həcmi və auditoriyasına uyğun ətraflı plan hazırlayırıq." },
+        "execution": { "title": "İcra", "desc": "Komandamız tədbirinizin günündə hər detalı dəqiqliklə idarə edir." },
+        "followup":  { "title": "İzləmə", "desc": "Nəticələri dəyərləndiririk və geri bildirim toplayırıq." }
+      }
+    },
+    "commitment": {
+      "eyebrow": "Öhdəliyimiz",
+      "title": "Uzun müddət yadda qalan tədbirlər yaradırıq",
+      "desc": "Sübut edilmiş nəticələrimiz, əməkdaşlıq yanaşmamız və mükəmməlliyə sadiqlik ilə tədbiriniz başa çatdıqdan sonra da davam edən bir rezonans yaratmağınıza kömək etmək üçün özünəməxsus mövqeyə sahibik.",
+      "cta": "Əlaqə saxlayın",
+      "venues": "Məkan",
+      "years": "İl Təcrübə"
+    },
+    "projects": {
+      "desc": "Azərbaycanda uğurla həyata keçirdiyimiz tədbirlərin seçmə nümunələri."
+    }
   },
   "footer": {
     "tagline": "Azərbaycanda peşəkar məkan idarəetməsi, tədbir təşkilatçılığı və konqres xidmətləri sahəsinin etibarlı tərəfdaşı.",

@@ -23,7 +23,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0a0a0a] text-white/50">
+    <footer className="bg-brand-600 text-white/60">
+      {/* Partial divider — separates CTA from footer visually */}
+      <div className="flex justify-center pt-0">
+        <div className="w-[120px] h-px bg-white/20" />
+      </div>
       <div className="max-w-[1240px] mx-auto px-6 sm:px-12 py-[80px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo + tagline */}
@@ -32,7 +36,7 @@ export default function Footer() {
               <img
                 src="/assets/logo/EG logo.png"
                 alt="Earth Group MMC"
-                className="h-9 w-auto object-contain"
+                className="h-9 w-auto object-contain brightness-[10] invert"
               />
             </div>
             <p className="text-[0.9rem] leading-[1.8em]">{t('footer.tagline')}</p>
@@ -91,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/[0.07] mt-[60px] pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs">
+        <div className="border-t border-white/[0.15] mt-[60px] pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs">
           <span>© {new Date().getFullYear()} Earth Group MMC. {t('footer.rights')}</span>
         </div>
       </div>

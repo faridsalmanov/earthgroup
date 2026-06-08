@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
+import { AnimateIn, fadeUp, fadeLeft, scaleIn } from '@/components/AnimateIn';
 
 const services = [
   { key: 'venue',     image: '/assets/services/venue_management.jpg' },
@@ -16,11 +17,10 @@ export default function Services() {
 
   return (
     <>
-      <section className="bg-brand-900 py-20 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="font-display text-4xl sm:text-5xl text-white font-bold mb-4">{t('servicesPage.title')}</h1>
-          <p className="text-brand-200 text-lg max-w-xl">{t('servicesPage.subtitle')}</p>
-        </div>
+      <section className="bg-brand-900 flex items-center justify-center text-center px-4" style={{ minHeight: '280px', paddingTop: '100px', paddingBottom: '60px' }}>
+        <AnimateIn variants={fadeUp} duration={0.7}>
+          <h1 className="font-display text-4xl sm:text-[3.1rem] text-white font-medium tracking-[-0.02em] leading-[1.2em]">{t('servicesPage.title')}</h1>
+        </AnimateIn>
       </section>
 
       <section className="bg-white">
@@ -28,15 +28,27 @@ export default function Services() {
           const isEven = index % 2 === 0;
           return (
             <div key={key} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[420px]`}>
-              <div className="w-full lg:w-1/2 relative overflow-hidden min-h-[280px] lg:min-h-0">
+              {/* Image */}
+              <AnimateIn
+                className="w-full lg:w-1/2 relative overflow-hidden min-h-[280px] lg:min-h-0"
+                variants={scaleIn}
+                duration={0.8}
+              >
                 <img
                   src={image}
                   alt={t(`services.items.${key}.title`)}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-brand-900/30" />
-              </div>
-              <div className={`w-full lg:w-1/2 flex items-center px-8 py-14 lg:px-16 ${isEven ? 'bg-white' : 'bg-brand-50'}`}>
+              </AnimateIn>
+
+              {/* Text */}
+              <AnimateIn
+                className={`w-full lg:w-1/2 flex items-center px-8 py-14 lg:px-16 ${isEven ? 'bg-white' : 'bg-brand-50'}`}
+                variants={isEven ? fadeLeft : fadeUp}
+                delay={0.15}
+                duration={0.7}
+              >
                 <div className="max-w-md">
                   <div className="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3">
                     0{index + 1}
@@ -48,7 +60,7 @@ export default function Services() {
                     {t(`services.items.${key}.desc`)}
                   </p>
                 </div>
-              </div>
+              </AnimateIn>
             </div>
           );
         })}

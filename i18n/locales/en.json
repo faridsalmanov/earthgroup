@@ -139,25 +139,22 @@
     "eyebrow": "About Us",
     "title": "Who We Are",
     "subtitle": "A trusted partner, a professional team.",
-    "missionEyebrow": "Our Mission",
-    "missionTitle": "Flawless Events, Every Time",
+    "missionTitle": "Our Mission",
     "missionText": "Earth Group MMC specializes in the management and organization of halls, trade fairs, congresses, conferences, and meeting venues. Leveraging professionalism and innovation, we deliver flawless preparation for every event.",
-    "visionEyebrow": "Our Vision",
-    "visionTitle": "The Leading Partner in the South Caucasus",
-    "visionText": "Earth Group MMC strives to become the most trusted name in professional event and venue management in the South Caucasus, recognized not only for operational excellence but for the lasting relationships we build with every client.",
-    "valuesEyebrow": "Our Values",
-    "values": {
+    "principlesEyebrow": "Core Principles",
+    "principlesSubtitle": "The values that form the foundation of our success",
+    "principles": {
+      "safety": {
+        "title": "Safety",
+        "desc": "We treat the safety of participants and venues as our top priority at every stage of event management. Risks are assessed in advance and all necessary precautions are taken."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "Quality is our fundamental principle — it is the main reason we have earned the trust of our clients and secured a reliable position in the market."
+      },
       "professionalism": {
         "title": "Professionalism",
-        "desc": "We approach every event with the highest professional standards, treating every detail as essential."
-      },
-      "innovation": {
-        "title": "Innovation",
-        "desc": "We adapt to the evolving landscape of events, bringing modern solutions to every client."
-      },
-      "reliability": {
-        "title": "Reliability",
-        "desc": "Our clients know us as a partner who keeps their word and stays focused on delivering results."
+        "desc": "We remain committed to our promises and deliver every event on time and flawlessly. Our experienced team executes every project in line with international standards."
       }
     }
   },
@@ -165,6 +162,37 @@
     "eyebrow": "What We Offer",
     "title": "Our Services",
     "subtitle": "From a single meeting to an international congress, comprehensive solutions tailored to your requirements."
+  },
+  "home": {
+    "learnMore": "Learn more →",
+    "eventOutcomes": "Event outcomes",
+    "whyUs": {
+      "eyebrow": "Why choose us",
+      "title": "We strive to deliver exceptional events",
+      "desc": "We are dedicated to providing the highest level of service, delivering innovative solutions, and exceeding expectations in everything we do."
+    },
+    "process": {
+      "eyebrow": "Our process",
+      "desc": "We developed a flexible, client-centred process that allows us to understand your goals and deliver outstanding results every time.",
+      "learnMore": "Learn more",
+      "steps": {
+        "discovery": { "title": "Discovery",   "desc": "We gain a deep understanding of your event goals and requirements." },
+        "planning":  { "title": "Planning",    "desc": "We develop a detailed, tailored plan for your event scope and audience." },
+        "execution": { "title": "Execution",   "desc": "Our team coordinates every detail precisely on the day of your event." },
+        "followup":  { "title": "Follow-up",   "desc": "We review outcomes and gather feedback to continuously improve." }
+      }
+    },
+    "commitment": {
+      "eyebrow": "Our commitment",
+      "title": "We build events that leave a lasting impression",
+      "desc": "With our proven track record, collaborative approach, and commitment to excellence, we are uniquely positioned to help you create events that resonate long after they end.",
+      "cta": "Get in touch",
+      "venues": "Venues",
+      "years": "Years"
+    },
+    "projects": {
+      "desc": "A selection of events we have successfully organized and managed across Azerbaijan."
+    }
   },
   "footer": {
     "tagline": "Azerbaijan's trusted partner for professional venue management, event organization, and congress services.",
