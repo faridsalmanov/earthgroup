@@ -26,18 +26,21 @@ export default function Footer() {
     <footer className="bg-brand-600 text-white/60">
       {/* Partial divider — separates CTA from footer visually */}
       <div className="flex justify-center pt-0">
-        <div className="w-[120px] h-px bg-white/20" />
+        <div className="w-[320px] sm:w-[480px] h-px bg-white/20" />
       </div>
       <div className="max-w-[1240px] mx-auto px-6 sm:px-12 py-[80px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo + tagline */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-4">
-            <div className="bg-white/10 rounded-lg px-3 py-2 inline-block">
-              <img
-                src="/assets/logo/EG logo.png"
-                alt="Earth Group MMC"
-                className="h-9 w-auto object-contain brightness-[10] invert"
-              />
+            <div className="flex items-center gap-3">
+              <div className="bg-white rounded-2xl w-16 h-16 overflow-hidden inline-flex items-center justify-center shadow-lg shrink-0">
+                <img
+                  src="/assets/logo/logo-Photoroom.png"
+                  alt="Earth Group MMC"
+                  className="h-[170%] w-[170%] object-contain"
+                />
+              </div>
+              <span className="text-white text-xl font-semibold tracking-[-0.02em]">Earth Group</span>
             </div>
             <p className="text-[0.9rem] leading-[1.8em]">{t('footer.tagline')}</p>
           </div>

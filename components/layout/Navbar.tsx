@@ -66,16 +66,19 @@ export default function Navbar() {
             }}
           >
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0">
+            <Link href="/" className="flex items-center gap-1 shrink-0">
               <img
                 src="/assets/logo/logo-Photoroom.png"
                 alt="Earth Group MMC"
-                className="h-10 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
+              <span className="text-white text-base sm:text-lg font-semibold tracking-[-0.02em] whitespace-nowrap">
+                Earth Group
+              </span>
             </Link>
 
             {/* Desktop nav links */}
-            <nav className="hidden md:flex items-center gap-9">
+            <nav className="hidden lg:flex items-center gap-9">
               {links.map(({ to, label }) => (
                 <Link
                   key={to}
@@ -90,7 +93,7 @@ export default function Navbar() {
             </nav>
 
             {/* Right side: lang + CTA */}
-            <div className="hidden md:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-5">
               <LangSwitcher />
               <Link
                 href="/contact"
@@ -105,7 +108,7 @@ export default function Navbar() {
 
             {/* Mobile burger */}
             <button
-              className="md:hidden p-2 text-white/70 hover:text-white"
+              className="lg:hidden p-2 text-white/70 hover:text-white"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
@@ -122,7 +125,7 @@ export default function Navbar() {
           {/* Mobile dropdown */}
           {open && (
             <div
-              className="md:hidden mt-2 rounded-2xl overflow-hidden"
+              className="lg:hidden mt-2 rounded-2xl overflow-hidden"
               style={{
                 background: 'rgba(15, 15, 15, 0.60)',
                 backdropFilter: 'blur(16px)',

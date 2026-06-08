@@ -46,7 +46,7 @@ export default function About() {
               <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" />
             </svg>
           </AnimateIn>
-          <div className="flex-1">
+          <div className="w-full lg:w-auto lg:flex-1">
             <StaggerContainer stagger={0.13}>
               <StaggerItem variants={fadeLeft}>
                 <h2 className="text-3xl sm:text-[3.1rem] font-medium text-brand-900 tracking-[-0.02em] leading-[1.2em] mb-6">
@@ -80,7 +80,12 @@ export default function About() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6" stagger={0.14}>
             {(['safety', 'quality', 'professionalism'] as const).map((key) => (
               <StaggerItem key={key} variants={fadeUp}>
-                <div className="bg-white rounded-[16px] p-8 h-full flex flex-col gap-5 shadow-sm border border-black/[0.04]">
+                <div
+                  className="bg-white rounded-[16px] p-8 h-full flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1.5"
+                  style={{ boxShadow: '0 8px 28px rgba(20,83,45,0.10)', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = '0 20px 48px rgba(20,83,45,0.18)')}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = '0 8px 28px rgba(20,83,45,0.10)')}
+                >
                   <div className="w-14 h-14 rounded-[12px] bg-brand-900 flex items-center justify-center shrink-0">
                     {principleIcons[key]}
                   </div>

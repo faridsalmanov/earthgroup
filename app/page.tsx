@@ -45,8 +45,7 @@ export default function Home() {
     <>
       {/* ─── HERO ─── */}
       <section
-        className="relative flex flex-col justify-center overflow-hidden -mt-[76px]"
-        style={{ minHeight: '800px', maxHeight: '1000px', height: '100vh' }}
+        className="relative flex flex-col justify-center overflow-hidden -mt-[76px] h-[100svh] min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] max-h-[1000px]"
       >
         {heroImages.map((src, i) => (
           <div
@@ -107,13 +106,13 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto space-y-[75px]">
           {/* Split header */}
           <div className="flex flex-col lg:flex-row gap-[60px] lg:gap-[100px] items-start lg:items-end justify-between">
-            <AnimateIn className="flex-1 max-w-[500px]" variants={fadeLeft}>
+            <AnimateIn className="w-full lg:w-auto lg:flex-1 max-w-[500px]" variants={fadeLeft}>
               <SectionLabel text={t('services.eyebrow')} />
               <h2 className="text-3xl sm:text-[3.1rem] font-medium leading-[1.2em] tracking-[-0.02em]">
                 {t('services.title')}
               </h2>
             </AnimateIn>
-            <AnimateIn className="flex-1 max-w-[550px]" delay={0.15}>
+            <AnimateIn className="w-full lg:w-auto lg:flex-1 max-w-[550px]" delay={0.15}>
               <p className="text-[1.13rem] leading-[1.7em] text-gray-600">{t('services.subtitle')}</p>
             </AnimateIn>
           </div>
@@ -172,7 +171,7 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-[80px] lg:gap-[100px] items-center">
             {/* Image */}
-            <AnimateIn className="flex-1 relative rounded-[15px] overflow-hidden" variants={scaleIn} duration={0.8}
+            <AnimateIn className="w-full lg:w-auto lg:flex-1 relative rounded-[15px] overflow-hidden" variants={scaleIn} duration={0.8}
               style={{ height: '560px' } as React.CSSProperties}>
               <div className="w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: "url('/assets/projects/whoweare.jpeg')" }} />
@@ -187,7 +186,7 @@ export default function Home() {
                       +100%
                     </span>
                   </div>
-                  <svg viewBox="-4 -5 212 65" className="w-full" preserveAspectRatio="none" style={{ height: '72px' }}>
+                  <svg viewBox="-6 -8 372 70" className="w-full" preserveAspectRatio="xMidYMid meet" style={{ height: '72px' }}>
                     <defs>
                       <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#16a34a" stopOpacity="0.18" />
@@ -195,25 +194,25 @@ export default function Home() {
                       </linearGradient>
                     </defs>
                     <path
-                      d="M0,52 C25,48 45,42 65,35 S95,22 115,16 S155,6 180,3 L200,1 L200,56 L0,56 Z"
+                      d="M0,48 C45,44 80,38 120,32 S170,18 210,13 S280,5 330,3 L360,2 L360,56 L0,56 Z"
                       fill="url(#areaGrad)"
                     />
                     <path
-                      d="M0,52 C25,48 45,42 65,35 S95,22 115,16 S155,6 180,3 L200,1"
+                      d="M0,48 C45,44 80,38 120,32 S170,18 210,13 S280,5 330,3 L360,2"
                       fill="none"
                       stroke="#16a34a"
-                      strokeWidth="2"
+                      strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                    <circle cx="200" cy="1" r="3.5" fill="#16a34a" />
+                    <circle cx="360" cy="2" r="4.5" fill="#16a34a" />
                   </svg>
                 </div>
               </AnimateIn>
             </AnimateIn>
 
             {/* Text */}
-            <div className="flex-1 space-y-5">
+            <div className="w-full lg:w-auto lg:flex-1 space-y-5">
               <AnimateIn variants={fadeLeft}>
                 <SectionLabel text={t('about.eyebrow')} />
                 <h2 className="text-3xl sm:text-[3.1rem] font-medium leading-[1.2em] tracking-[-0.02em]">
@@ -289,8 +288,8 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-[80px] lg:gap-[100px] items-center">
             {/* Image with stat badges */}
-            <AnimateIn className="flex-1 relative pb-[60px] pr-0 lg:pr-[60px]" variants={scaleIn} duration={0.8}>
-              <div className="rounded-[10px] bg-cover bg-center"
+            <AnimateIn className="w-full lg:w-auto lg:flex-1 relative pb-[60px] pr-0 lg:pr-[60px]" variants={scaleIn} duration={0.8}>
+              <div className="w-full rounded-[10px] bg-cover bg-center"
                 style={{ backgroundImage: "url('/assets/projects/baku marathon/marathon_2025.jpg')", height: '500px' }} />
               <AnimateIn className="absolute bottom-0 right-0 flex gap-4" delay={0.3}>
                 <div className="bg-brand-600 rounded-[10px] px-5 py-7 text-center min-w-[110px]">
@@ -311,7 +310,7 @@ export default function Home() {
             </AnimateIn>
 
             {/* Text */}
-            <div className="flex-1 space-y-5">
+            <div className="w-full lg:w-auto lg:flex-1 space-y-5">
               <AnimateIn variants={fadeLeft}>
                 <SectionLabel text={t('home.commitment.eyebrow')} />
                 <h2 className="text-3xl sm:text-[3.1rem] font-medium leading-[1.2em] tracking-[-0.02em]">
@@ -396,7 +395,7 @@ export default function Home() {
       <section className="bg-brand-600 py-[100px] px-6 sm:px-12">
         <div className="max-w-[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-[50px]">
-            <AnimateIn className="flex-1" variants={fadeLeft}>
+            <AnimateIn className="w-full lg:w-auto lg:flex-1" variants={fadeLeft}>
               <h2 className="text-3xl sm:text-[3.1rem] font-medium leading-[1.2em] tracking-[-0.02em] text-white max-w-[600px]">
                 {t('cta.title')}
               </h2>
