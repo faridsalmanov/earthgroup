@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import I18nProvider from '@/components/I18nProvider';
 import Layout from '@/components/layout/Layout';
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <I18nProvider>
           <Layout>{children}</Layout>
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
